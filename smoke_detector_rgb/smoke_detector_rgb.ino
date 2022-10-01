@@ -3,8 +3,8 @@
 Adafruit_MLX90640 mlx;
 float frame[32*24];
 
-#define MINTEMP 20
-#define MAXTEMP 35
+#define MINTEMP 25
+#define MAXTEMP 33
 
 const uint16_t camColors[] = {0x480F,
 0x400F,0x400F,0x400F,0x4010,0x3810,0x3810,0x3810,0x3810,0x3010,0x3010,
@@ -85,6 +85,6 @@ void loop() {
   }
   Serial.println("]");
 
-  delay(2000);
+  delay(3000);
 
 }
