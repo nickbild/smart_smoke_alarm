@@ -27,7 +27,7 @@ Smart Smoke Alarm attempts to solve this problem by providing firefighters with 
 
 ## How It Works
 
-There are two development boards — an Arduino Nano 33 IoT and an Adafruit Feather M4 Express.  The Feather M4 Express handles capturing measuremnts from the thermal camera and provides the processing power to run the machine learning algorithm that was developed with Edge Impulse.  The Nano 33 IoT provides WiFi for wireless communications, and also serves as a simulated smoke detector.
+There are two development boards — an Arduino Nano 33 IoT and an Adafruit Feather M4 Express.  The Feather M4 Express handles capturing measurements from the thermal camera and provides the processing power to run the machine learning algorithm that was developed with Edge Impulse.  The Nano 33 IoT provides WiFi for wireless communications, and also serves as a simulated smoke detector.
 
 ![](https://raw.githubusercontent.com/nickbild/smart_smoke_alarm/main/media/assembly_boards_sm.jpg)
 
