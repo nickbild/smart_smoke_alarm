@@ -39,7 +39,7 @@ The hardware was placed in a [3D printed case](https://github.com/nickbild/smart
 
 ## Data Preparation
 
-An [Arduino sketch](https://github.com/nickbild/smart_smoke_alarm/tree/main/smoke_detector_data_collection) was created to capture thermal images to train the neural network.  I captured measurements for two classes — person and empty room.  For the person class, I took many images of myself standing, sitting, walking, and otherwise moving about the room.  The empty room class is self-explanatory.  In total, I collected 189 'person' images, and 130 'empty' images.  These measurements were processed with a simple [Python script](https://github.com/nickbild/smart_smoke_alarm/blob/main/parse_training_data.py) that formatted the data as CSV files, then they were uploaded to my Edge Impulse project using the data acquisition tool.
+An [Arduino sketch](https://github.com/nickbild/smart_smoke_alarm/tree/main/smoke_detector_data_collection) was created to capture thermal images to train the neural network.  I captured measurements for two classes — person and empty room.  For the person class, I took many images of myself standing, sitting, walking, and otherwise moving about the room.  The empty room class is self-explanatory.  In total, I collected 189 'person' images, and 130 'empty' images.  These measurements were processed with a simple [Python script](https://github.com/nickbild/smart_smoke_alarm/blob/main/parse_training_data.py) that formatted the data as CSV files, then they were uploaded to my [Edge Impulse project](https://studio.edgeimpulse.com/public/142241/latest) using the data acquisition tool.
 
 ![](https://github.com/nickbild/smart_smoke_alarm/blob/main/media/ei_data_sm.png)
 
