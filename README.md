@@ -29,9 +29,13 @@ TODO: video
 
 There are two development boards — an Arduino Nano 33 IoT and an Adafruit Feather M4 Express.  The Feather M4 Express handles capturing measuremnts from the thermal camera and provides the processing power to run the machine learning algorithm that was developed with Edge Impulse.  The Nano 33 IoT provides WiFi for wireless communications, and also serves as a simulated smoke detector.
 
+![](https://raw.githubusercontent.com/nickbild/smart_smoke_alarm/main/media/assembly_boards_sm.jpg)
+
 Since smoke detection is already a solved problem, and I didn't want to have to start a fire to test my device, I simulated this function with a push button on the side of the case.  Pressing this button starts a simulated smoke alarm which turns on an audible alert using a piezo buzzer.  This also triggers the thermal camera to start capturing data and passing it to a neural network classifier that was trained to detect people by their heat signatures.  If a person is detected during an active alarm, that fact is communicated to a remote web API via WiFi.  The API records the location and timestamp in a database that could be used to identify where rescue efforts should be focused.
 
 The hardware was placed in a [3D printed case](https://github.com/nickbild/smart_smoke_alarm/blob/main/case.stl) that was mounted near the ceiling where it has a good view of the entire room.
+
+![](https://raw.githubusercontent.com/nickbild/smart_smoke_alarm/main/media/assembly_case_close_sm.jpg)
 
 ## Data Preparation
 
