@@ -1,5 +1,7 @@
 # Smart Smoke Alarm
 
+![](https://raw.githubusercontent.com/nickbild/smart_smoke_alarm/main/media/assembly_case_close_annotated_sm.jpg)
+
 ## Intro
 
 Thousands of people die each year in fires in both residential and commercial settings.  Offices, warehouses, industrial, and manufacturing plants account for well over 1,000 fire-related injuries annually.  First responders work hard to rescue individuals that are either trapped in or incapacitated by a building fire, but without knowing where to look, they may not find them in time.
