@@ -64,6 +64,7 @@ That sounded too good to be true, so I used the model testing tool as a secondar
 Edge Impulse offers many options for deployment, but in my case the best option was the "Arduino library" download.  This packaged up the entire classification pipeline as a compressed archive that I could import into Arduino IDE, then modify as needed to add my own logic (like to communicate with the Nano 33 IoT to send messages over WiFi, for example).  That sketch can be found [here](https://github.com/nickbild/smart_smoke_alarm/tree/main/smoke_detector_ei).  And the sketch that runs the simulated smoke detector on the Nano 33 IoT can be found [here](https://github.com/nickbild/smart_smoke_alarm/tree/main/smoke_detector_companion).
 
 ![](https://raw.githubusercontent.com/nickbild/smart_smoke_alarm/main/media/installed_off_sm.jpg)
+![](https://raw.githubusercontent.com/nickbild/smart_smoke_alarm/main/media/installed_off_distance_sm.jpg)
 
 ## Conclusion
 
