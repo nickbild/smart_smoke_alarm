@@ -10,11 +10,13 @@ const char* host = "192.168.1.113";
 const char* url = "/send_alert?";
 
 void setup() {
-  Serial.begin(115200);
+//  Serial.begin(115200);
 
-  // TEMP
+  // Additional GND and VCC.
   pinMode(6, OUTPUT);
   digitalWrite(6, LOW);
+  pinMode(7, OUTPUT);
+  digitalWrite(7, HIGH);
   
   pinMode(BUZZER_PIN, OUTPUT);
   pinMode(ALERT_PIN, INPUT);
@@ -25,12 +27,12 @@ void setup() {
   
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
-    Serial.print(".");
+//    Serial.print(".");
   }
 
-  Serial.println("\nWiFi connected.");
-  Serial.println("IP address: ");
-  Serial.println(WiFi.localIP());
+//  Serial.println("\nWiFi connected.");
+//  Serial.println("IP address: ");
+//  Serial.println(WiFi.localIP());
 }
 
 void loop() {
@@ -40,6 +42,7 @@ void loop() {
 }
 
 void playBuzzer() {
+  delay(3000);
   for (int i=0; i<30; i++) {
     tone(BUZZER_PIN, 1000);
     if (digitalRead(ALERT_PIN) == HIGH) { sendAlertToAPI(); }
@@ -53,7 +56,7 @@ void playBuzzer() {
 void sendAlertToAPI() {
   // Send in person detection alert to API.
   if (!client.connect(host, 5000)) {
-    Serial.println("Connection failed.");
+//    Serial.println("Connection failed.");
     return;
   }
 
