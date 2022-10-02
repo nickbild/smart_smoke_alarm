@@ -37,7 +37,7 @@ The hardware was placed in a [3D printed case](https://github.com/nickbild/smart
 
 An [Arduino sketch](https://github.com/nickbild/smart_smoke_alarm/tree/main/smoke_detector_data_collection) was created to capture thermal images to train the neural network.  I captured measurements for two classes — person and empty room.  For the person class, I took many images of myself standing, sitting, walking, and otherwise moving about the room.  The empty room class is self-explanatory.  In total, I collected 189 'person' images, and 130 'empty' images.  These measurements were processed with a simple [Python script](https://github.com/nickbild/smart_smoke_alarm/blob/main/parse_training_data.py) that formatted the data as CSV files, then they were uploaded to my Edge Impulse project using the data acquisition tool.
 
-To give a better idea of what the thermal camera "sees," I wrote another [Arduino sketch](https://github.com/nickbild/smart_smoke_alarm/tree/main/smoke_detector_rgb) that converts the measurements into RGB values, which are then transfomed into PNG images with [this script](https://github.com/nickbild/smart_smoke_alarm/blob/main/rgb2png.py).  A few examples follow.
+To give a better idea of what the thermal camera "sees," I wrote another [Arduino sketch](https://github.com/nickbild/smart_smoke_alarm/tree/main/smoke_detector_rgb) that converts the measurements into RGB values, which are then transformed into PNG images with [this script](https://github.com/nickbild/smart_smoke_alarm/blob/main/rgb2png.py).  A few examples follow.
 
 ![](https://github.com/nickbild/smart_smoke_alarm/blob/main/media/me_standing2_lg.png)
 
@@ -51,7 +51,13 @@ To give a better idea of what the thermal camera "sees," I wrote another [Arduin
 
 ## Building the ML Model
 
+Building the model turned out to be the simplest part of the entire project.  I created a new impulse that forwards the raw thermal image data into a neural network classification block.  I kept the default model design and hyperparameters and clicked the "Start training" button.  Surprisingly, the classification accuracy was reported as being at 100% right off the bat.
+
+That sounded too good to be true, so I used the model testing tool as a secondary validation that uses 20% of the uploaded data that was not included in the training process.  That showed an average classification accuracy of 96.88%, confirming that the model is working very well.  There is really no need to improve on this for a proof of concept, so I moved on to loading this model onto my hardware.
+
 ## Deploying the Model
+
+Edge Impulse offers many options for deployment, but in my case the best option was the "Arduino library" download.  This packaged up the entire classification pipeline as a compressed archive that I could import into Arduino IDE, then modify as needed to add my own logic (like to communicate with the Nano 33 IoT to send messages over WiFi, for example).  That sketch can be found [here](https://github.com/nickbild/smart_smoke_alarm/tree/main/smoke_detector_ei).  And the sketch that runs the simulated smoke detector on the Nano 33 IoT can be found [here](https://github.com/nickbild/smart_smoke_alarm/tree/main/smoke_detector_companion).
 
 ## Conclusion
 
