@@ -13,7 +13,7 @@ Smart Smoke Alarm attempts to solve this problem by providing firefighters with 
 - 1 x Adafruit MLX90640 24x32 IR Thermal Camera (110 Degree FoV)
 - 1 x Adafruit Feather M4 Express
 - 1 x Arduino Nano 33 IoT
-- 1 x 350 mAh 0r greater LiPo battery
+- 1 x 350 mAh or greater LiPo battery
 - 1 x Piezo buzzer
 - 1 x Push button
 - 1 x 3D printed case (optional)
