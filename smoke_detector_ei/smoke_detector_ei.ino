@@ -153,8 +153,9 @@ void loop()
       // A person has been detected.
       Serial.println("**** PERSON DETECTED ****");
       digitalWrite(DETECTION_PIN, HIGH);
-      delay(1000);
+      delay(1500);
       digitalWrite(DETECTION_PIN, LOW);
+      delay(30000);
     }
     
 #if EI_CLASSIFIER_HAS_ANOMALY == 1
