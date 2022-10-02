@@ -59,7 +59,11 @@ To give a better idea of what the thermal camera "sees," I wrote another [Arduin
 
 Building the model turned out to be the simplest part of the entire project.  I created a new impulse that forwards the raw thermal image data into a neural network classification block.  I kept the default model design and hyperparameters and clicked the "Start training" button.  Surprisingly, the classification accuracy was reported as being at 100% right off the bat.
 
+![](https://github.com/nickbild/smart_smoke_alarm/blob/main/media/ei_nn_sm.png)
+
 That sounded too good to be true, so I used the model testing tool as a secondary validation that uses 20% of the uploaded data that was not included in the training process.  That showed an average classification accuracy of 96.88%, confirming that the model is working very well.  There is really no need to improve on this for a proof of concept, so I moved on to loading this model onto my hardware.
+
+![](https://github.com/nickbild/smart_smoke_alarm/blob/main/media/ei_model_testing_sm.png)
 
 ## Deploying the Model
 
