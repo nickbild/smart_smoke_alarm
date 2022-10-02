@@ -25,9 +25,9 @@ def send_alert():
     
     with closing(sqlite3.connect("smart_smoke_alarm.db")) as connection:
         with closing(connection.cursor()) as cursor:
-            cursor.execute("INSERT INTO alerts (location_id, time_stamp) VALUES ('{0}', '{1}', )".format(location_id, now))
+            cursor.execute("INSERT INTO alerts (location_id, time_stamp) VALUES ('{0}', '{1}')".format(location_id, now))
             connection.commit()
-    print("Smoke alarm sounding! Person detected in location {0) at {1}.".format(location_id, now))
+    print("Smoke alarm sounding! Person detected in location {0} at {1}.".format(location_id, now))
 
     return "OK"
 
