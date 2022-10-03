@@ -18,6 +18,7 @@ Smart Smoke Alarm attempts to solve this problem by providing firefighters with 
 - 1 x 350 mAh or greater LiPo battery
 - 1 x Piezo buzzer
 - 1 x Push button
+- 1 x 10K ohm resistor
 - 1 x 3D printed case (optional)
 
 ## Software Requirements
